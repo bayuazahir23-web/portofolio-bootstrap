@@ -1,0 +1,2135 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Bayu Zahir | Digital Portfolio</title>
+
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #eef4f8;
+            color: #1c2b39;
+            line-height: 1.6;
+        }
+
+
+        /* ================= NAVBAR ================= */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            background: rgba(255,255,255,0.95);
+
+            border-bottom: 1px solid #d8e2e8;
+        }
+
+        .navbar {
+            max-width: 1100px;
+            margin: auto;
+
+            padding: 18px 25px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: #183b56;
+            text-decoration: none;
+
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #287ca6;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 28px;
+        }
+
+        .nav-menu a {
+            color: #536572;
+            text-decoration: none;
+
+            font-size: 14px;
+
+            transition: 0.2s;
+        }
+
+        .nav-menu a:hover {
+            color: #287ca6;
+        }
+
+        .menu-btn {
+            display: none;
+
+            border: none;
+            background: none;
+
+            font-size: 25px;
+
+            cursor: pointer;
+
+            color: #183b56;
+        }
+
+
+        /* ================= HERO ================= */
+
+        .hero {
+            max-width: 1100px;
+            min-height: 650px;
+
+            margin: auto;
+
+            padding: 100px 25px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 70px;
+        }
+
+        .hero-text {
+            max-width: 650px;
+        }
+
+        .small-text {
+            color: #287ca6;
+
+            font-size: 13px;
+            letter-spacing: 2px;
+
+            margin-bottom: 12px;
+        }
+
+        .hero h1 {
+            color: #183b56;
+
+            font-size: 62px;
+            line-height: 1.1;
+
+            margin-bottom: 15px;
+        }
+
+        .hero h1 span {
+            color: #287ca6;
+        }
+
+        .hero h2 {
+            color: #536572;
+
+            font-size: 21px;
+            font-weight: normal;
+
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 580px;
+
+            color: #647786;
+        }
+
+        .hero-buttons {
+            display: flex;
+
+            gap: 12px;
+
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+
+            padding: 11px 21px;
+
+            border-radius: 5px;
+
+            text-decoration: none;
+
+            font-size: 14px;
+
+            cursor: pointer;
+
+            border: none;
+        }
+
+        .primary {
+            background: #183b56;
+            color: white;
+        }
+
+        .primary:hover {
+            background: #287ca6;
+        }
+
+        .secondary {
+            border: 1px solid #183b56;
+            color: #183b56;
+        }
+
+        .secondary:hover {
+            background: #183b56;
+            color: white;
+        }
+
+
+        /* ================= PROFILE ================= */
+
+        .hero-card {
+            width: 350px;
+
+            padding: 35px;
+
+            background: white;
+
+            border: 1px solid #d7e2e9;
+
+            border-radius: 12px;
+
+            text-align: center;
+
+            box-shadow: 0 10px 30px rgba(24,59,86,0.08);
+        }
+
+        .profile-circle {
+            width: 125px;
+            height: 125px;
+
+            margin: auto;
+            margin-bottom: 20px;
+
+            border-radius: 50%;
+
+            background: #dcecf4;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            color: #183b56;
+
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        .hero-card h3 {
+            color: #183b56;
+
+            margin-bottom: 5px;
+        }
+
+        .hero-card p {
+            color: #7b8c98;
+
+            font-size: 13px;
+        }
+
+
+        /* ================= SECTION ================= */
+
+        .section {
+            max-width: 1100px;
+
+            margin: auto;
+
+            padding: 90px 25px;
+        }
+
+        .section-title {
+            margin-bottom: 45px;
+        }
+
+        .section-title p {
+            color: #287ca6;
+
+            font-size: 12px;
+            letter-spacing: 2px;
+
+            margin-bottom: 5px;
+        }
+
+        .section-title h2 {
+            color: #183b56;
+
+            font-size: 34px;
+        }
+
+
+        /* ================= ABOUT ================= */
+
+        #about {
+            max-width: none;
+
+            background: white;
+        }
+
+        .about-content {
+            max-width: 1100px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: 300px 1fr;
+
+            gap: 60px;
+        }
+
+        .about-box {
+            height: 300px;
+
+            background: #e2f0f6;
+
+            border-radius: 12px;
+
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+        }
+
+        .about-box span {
+            color: #287ca6;
+
+            font-size: 75px;
+        }
+
+        .about-text h3 {
+            color: #183b56;
+
+            font-size: 25px;
+
+            margin-bottom: 15px;
+        }
+
+        .about-text p {
+            color: #647786;
+
+            margin-bottom: 15px;
+        }
+
+        .info {
+            margin-top: 25px;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 15px;
+        }
+
+        .info div {
+            padding-bottom: 10px;
+
+            border-bottom: 1px solid #d9e3e8;
+        }
+
+        .info strong {
+            display: block;
+
+            color: #287ca6;
+
+            font-size: 13px;
+        }
+
+        .info span {
+            color: #647786;
+
+            font-size: 14px;
+        }
+
+
+        /* ================= SKILLS ================= */
+
+        #skills {
+            max-width: none;
+
+            background: #e8f1f5;
+        }
+
+        #skills .section-title,
+        .skills-container {
+            max-width: 1100px;
+
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .skills-container {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 18px;
+        }
+
+        .skill-card {
+            background: white;
+
+            border: 1px solid #d5e1e7;
+
+            padding: 25px;
+
+            border-radius: 8px;
+
+            cursor: pointer;
+
+            transition: 0.2s;
+        }
+
+        .skill-card:hover {
+            border-color: #287ca6;
+
+            transform: translateY(-4px);
+
+            box-shadow: 0 8px 20px rgba(24,59,86,0.08);
+        }
+
+        .skill-icon {
+            color: #287ca6;
+
+            font-size: 13px;
+
+            font-weight: bold;
+
+            margin-bottom: 10px;
+        }
+
+        .skill-card h3 {
+            color: #183b56;
+
+            margin-bottom: 8px;
+        }
+
+        .skill-card p {
+            color: #71828e;
+
+            font-size: 13px;
+        }
+
+        .progress {
+            width: 100%;
+
+            height: 5px;
+
+            background: #dfe8ed;
+
+            margin-top: 18px;
+        }
+
+        .progress div {
+            height: 100%;
+
+            background: #287ca6;
+        }
+
+        .skill-card > span {
+            color: #7b8c98;
+
+            font-size: 11px;
+        }
+
+
+        /* ================= PROJECT ================= */
+
+        #projects {
+            max-width: none;
+
+            background: #f4f8fa;
+        }
+
+        #projects .section-title,
+        .project-container {
+            max-width: 1100px;
+
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .project-container {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 22px;
+        }
+
+        .project-card {
+            background: white;
+
+            border: 1px solid #d7e2e8;
+
+            border-radius: 10px;
+
+            overflow: hidden;
+
+            transition: 0.2s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+
+            box-shadow: 0 10px 25px rgba(24,59,86,0.09);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 190px;
+
+            background: #dcecf4;
+
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+            overflow: hidden;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+        .project-content {
+            padding: 22px;
+        }
+
+        .project-category {
+            color: #287ca6;
+
+            font-size: 11px;
+
+            font-weight: bold;
+        }
+
+        .project-content h3 {
+            color: #183b56;
+
+            margin: 8px 0;
+        }
+
+        .project-content p {
+            color: #71828e;
+
+            font-size: 13px;
+        }
+
+        .tags {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 5px;
+
+            margin: 15px 0;
+        }
+
+        .tags span {
+            background: #e8f2f6;
+
+            color: #526875;
+
+            padding: 4px 8px;
+
+            font-size: 10px;
+
+            border-radius: 3px;
+        }
+
+        .project-button {
+            border: none;
+
+            background: none;
+
+            color: #287ca6;
+
+            cursor: pointer;
+
+            font-size: 13px;
+
+            font-weight: bold;
+        }
+
+        .project-button:hover {
+            text-decoration: underline;
+        }
+
+
+        /* ================= JOURNEY ================= */
+
+        #journey {
+            max-width: none;
+
+            background: white;
+        }
+
+        #journey .section-title,
+        .timeline {
+            max-width: 800px;
+
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .timeline-item {
+            position: relative;
+
+            border-left: 2px solid #d7e4ea;
+
+            padding-left: 25px;
+
+            padding-bottom: 35px;
+        }
+
+        .timeline-dot {
+            position: absolute;
+
+            width: 9px;
+            height: 9px;
+
+            left: -5px;
+            top: 5px;
+
+            border-radius: 50%;
+
+            background: #287ca6;
+        }
+
+        .timeline-content span {
+            color: #287ca6;
+
+            font-size: 12px;
+
+            font-weight: bold;
+        }
+
+        .timeline-content h3 {
+            color: #183b56;
+
+            font-size: 18px;
+
+            margin: 5px 0;
+        }
+
+        .timeline-content p {
+            color: #71828e;
+
+            font-size: 13px;
+        }
+
+
+        /* ================= CONTACT ================= */
+
+        #contact {
+            max-width: none;
+
+            background: #e8f1f5;
+        }
+
+        #contact .section-title,
+        .contact-container {
+            max-width: 1100px;
+
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-container {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 60px;
+        }
+
+        .contact-info h3 {
+            color: #183b56;
+
+            font-size: 25px;
+
+            margin-bottom: 10px;
+        }
+
+        .contact-info > p {
+            color: #71828e;
+
+            margin-bottom: 25px;
+        }
+
+        .contact-item {
+            display: flex;
+
+            gap: 15px;
+
+            margin-bottom: 20px;
+        }
+
+        .contact-item span {
+            font-size: 20px;
+        }
+
+        .contact-item strong {
+            color: #287ca6;
+
+            font-size: 13px;
+        }
+
+        .contact-item p {
+            color: #71828e;
+
+            font-size: 13px;
+        }
+
+        .contact-link {
+            color: #71828e;
+
+            text-decoration: none;
+        }
+
+        .contact-link:hover {
+            color: #287ca6;
+        }
+
+        form {
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 12px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+
+            padding: 12px;
+
+            background: white;
+
+            border: 1px solid #cfdde4;
+
+            border-radius: 5px;
+
+            color: #222;
+
+            font-family: Arial;
+        }
+
+        input:focus,
+        textarea:focus {
+            outline: none;
+
+            border-color: #287ca6;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background: #183b56;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 40px 20px;
+        }
+
+        .footer-logo {
+            font-size: 25px;
+
+            font-weight: bold;
+        }
+
+        .footer-logo span {
+            color: #8dc5dd;
+        }
+
+        footer p {
+            color: #c5d7e0;
+
+            font-size: 12px;
+
+            margin: 8px;
+        }
+
+        .social {
+            display: flex;
+
+            justify-content: center;
+
+            gap: 20px;
+
+            margin: 18px 0;
+        }
+
+        .social a {
+            color: #d8e8ef;
+
+            text-decoration: none;
+
+            font-size: 12px;
+        }
+
+        .social a:hover {
+            color: white;
+        }
+
+
+        /* ================= MODAL ================= */
+
+        .modal {
+            display: none;
+
+            position: fixed;
+
+            inset: 0;
+
+            background: rgba(24,59,86,0.65);
+
+            justify-content: center;
+
+            align-items: center;
+
+            z-index: 2000;
+
+            padding: 20px;
+        }
+
+        .modal-content {
+            width: 100%;
+
+            max-width: 650px;
+
+            max-height: 90vh;
+
+            overflow-y: auto;
+
+            background: white;
+
+            border-radius: 12px;
+
+            padding: 25px;
+
+            position: relative;
+
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+
+        .modal-image {
+            width: 100%;
+
+            height: 280px;
+
+            border-radius: 8px;
+
+            overflow: hidden;
+
+            margin-bottom: 20px;
+
+            background: #e2f0f6;
+        }
+
+        .modal-image img {
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+        .modal-content h2 {
+            color: #183b56;
+
+            margin-bottom: 10px;
+        }
+
+        .modal-content p {
+            color: #71828e;
+
+            font-size: 14px;
+
+            margin-bottom: 20px;
+        }
+
+        .close {
+            position: absolute;
+
+            right: 15px;
+
+            top: 10px;
+
+            width: 35px;
+
+            height: 35px;
+
+            border: none;
+
+            border-radius: 50%;
+
+            background: white;
+
+            color: #183b56;
+
+            font-size: 22px;
+
+            cursor: pointer;
+
+            z-index: 5;
+
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 800px) {
+
+            .nav-menu {
+                display: none;
+
+                position: absolute;
+
+                top: 65px;
+
+                left: 0;
+
+                width: 100%;
+
+                background: white;
+
+                flex-direction: column;
+
+                text-align: center;
+
+                padding: 20px;
+
+                border-bottom: 1px solid #ddd;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .hero {
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                padding-top: 70px;
+            }
+
+            .hero h1 {
+                font-size: 48px;
+            }
+
+            .hero-card {
+                width: 100%;
+            }
+
+            .skills-container,
+            .project-container {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+        @media (max-width: 550px) {
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .skills-container,
+            .project-container {
+                grid-template-columns: 1fr;
+            }
+
+            .info {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+
+                width: 100%;
+            }
+
+            .btn {
+                text-align: center;
+            }
+
+            .modal-image {
+                height: 200px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <a href="#home" class="logo">
+                BZ<span>.</span>
+            </a>
+
+
+            <ul class="nav-menu">
+
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+
+                <li>
+                    <a href="#about">About</a>
+                </li>
+
+                <li>
+                    <a href="#skills">Skills</a>
+                </li>
+
+                <li>
+                    <a href="#projects">Projects</a>
+                </li>
+
+                <li>
+                    <a href="#journey">Journey</a>
+                </li>
+
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+
+            </ul>
+
+
+            <button
+                class="menu-btn"
+                onclick="toggleMenu()">
+
+                ☰
+
+            </button>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- ================= HOME ================= -->
+
+    <section id="home" class="hero">
+
+        <div class="hero-text">
+
+            <p class="small-text">
+                HELLO, I'M
+            </p>
+
+            <h1>
+                Bayu <span>Zahir</span>
+            </h1>
+
+            <h2>
+                Student & Technology Enthusiast
+            </h2>
+
+            <p>
+                Saya tertarik dengan dunia teknologi,
+                pemrograman, jaringan, dan Internet of Things.
+                Website ini berisi beberapa project yang
+                pernah saya pelajari dan kembangkan.
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <a
+                    href="#projects"
+                    class="btn primary">
+
+                    Lihat Project
+
+                </a>
+
+
+                <a
+                    href="#contact"
+                    class="btn secondary">
+
+                    Hubungi Saya
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-card">
+
+            <div class="profile-circle">
+                BZ
+            </div>
+
+            <h3>
+                Bayu Zahir
+            </h3>
+
+            <p>
+                Build. Learn. Create.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section id="about" class="section">
+
+        <div class="section-title">
+
+            <p>
+                ABOUT ME
+            </p>
+
+            <h2>
+                Tentang Saya
+            </h2>
+
+        </div>
+
+
+        <div class="about-content">
+
+            <div class="about-box">
+
+                <span>
+                    &lt;/&gt;
+                </span>
+
+            </div>
+
+
+            <div class="about-text">
+
+                <h3>
+                    Hai, saya Bayu 👋
+                </h3>
+
+                <p>
+                    Saya adalah seorang pelajar yang tertarik
+                    dengan teknologi dan pemrograman.
+                </p>
+
+                <p>
+                    Saya suka mencoba membuat website,
+                    mempelajari IoT, dan mengembangkan
+                    project dari ide sederhana.
+                </p>
+
+
+                <div class="info">
+
+                    <div>
+                        <strong>Nama</strong>
+                        <span>Bayu Zahir</span>
+                    </div>
+
+                    <div>
+                        <strong>Status</strong>
+                        <span>Student</span>
+                    </div>
+
+                    <div>
+                        <strong>Fokus</strong>
+                        <span>Technology</span>
+                    </div>
+
+                    <div>
+                        <strong>Hobi</strong>
+                        <span>Coding & Design</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= SKILLS ================= -->
+
+    <section id="skills" class="section">
+
+        <div class="section-title">
+
+            <p>
+                WHAT I LEARN
+            </p>
+
+            <h2>
+                Skills
+            </h2>
+
+        </div>
+
+
+        <div class="skills-container">
+
+
+            <div
+                class="skill-card"
+                onclick="showSkill('HTML')">
+
+                <div class="skill-icon">
+                    HTML
+                </div>
+
+                <h3>
+                    HTML
+                </h3>
+
+                <p>
+                    Membuat struktur halaman website.
+                </p>
+
+                <div class="progress">
+                    <div style="width: 90%;"></div>
+                </div>
+
+                <span>90%</span>
+
+            </div>
+
+
+            <div
+                class="skill-card"
+                onclick="showSkill('CSS')">
+
+                <div class="skill-icon">
+                    CSS
+                </div>
+
+                <h3>
+                    CSS
+                </h3>
+
+                <p>
+                    Mengatur tampilan website.
+                </p>
+
+                <div class="progress">
+                    <div style="width: 85%;"></div>
+                </div>
+
+                <span>85%</span>
+
+            </div>
+
+
+            <div
+                class="skill-card"
+                onclick="showSkill('JavaScript')">
+
+                <div class="skill-icon">
+                    JS
+                </div>
+
+                <h3>
+                    JavaScript
+                </h3>
+
+                <p>
+                    Membuat website lebih interaktif.
+                </p>
+
+                <div class="progress">
+                    <div style="width: 70%;"></div>
+                </div>
+
+                <span>70%</span>
+
+            </div>
+
+
+            <div
+                class="skill-card"
+                onclick="showSkill('Python')">
+
+                <div class="skill-icon">
+                    PY
+                </div>
+
+                <h3>
+                    Python
+                </h3>
+
+                <p>
+                    Programming dan pengembangan project.
+                </p>
+
+                <div class="progress">
+                    <div style="width: 75%;"></div>
+                </div>
+
+                <span>75%</span>
+
+            </div>
+
+
+            <div
+                class="skill-card"
+                onclick="showSkill('IoT')">
+
+                <div class="skill-icon">
+                    IoT
+                </div>
+
+                <h3>
+                    Internet of Things
+                </h3>
+
+                <p>
+                    Membuat project menggunakan sensor.
+                </p>
+
+                <div class="progress">
+                    <div style="width: 80%;"></div>
+                </div>
+
+                <span>80%</span>
+
+            </div>
+
+
+            <div
+                class="skill-card"
+                onclick="showSkill('UI/UX')">
+
+                <div class="skill-icon">
+                    UI
+                </div>
+
+                <h3>
+                    UI/UX
+                </h3>
+
+                <p>
+                    Membuat interface yang mudah digunakan.
+                </p>
+
+                <div class="progress">
+                    <div style="width: 75%;"></div>
+                </div>
+
+                <span>75%</span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= PROJECTS ================= -->
+
+    <section id="projects" class="section">
+
+        <div class="section-title">
+
+            <p>
+                MY WORK
+            </p>
+
+            <h2>
+                Project Saya
+            </h2>
+
+        </div>
+
+
+        <div class="project-container">
+
+
+            <!-- PROJECT 1 -->
+
+            <div class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="smart-room.jpg"
+                        alt="Smart Room Guardian">
+
+                </div>
+
+
+                <div class="project-content">
+
+                    <span class="project-category">
+                        INTERNET OF THINGS
+                    </span>
+
+                    <h3>
+                        Smart Room Guardian
+                    </h3>
+
+                    <p>
+                        Sistem monitoring suhu dan api
+                        menggunakan ESP32.
+                    </p>
+
+
+                    <div class="tags">
+
+                        <span>ESP32</span>
+                        <span>DHT11</span>
+                        <span>Flame Sensor</span>
+
+                    </div>
+
+
+                    <button
+                        class="project-button"
+                        onclick="showProject('Smart Room Guardian')">
+
+                        Lihat Detail →
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PROJECT 2 -->
+
+            <div class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="website.jpg"
+                        alt="Personal Website">
+
+                </div>
+
+
+                <div class="project-content">
+
+                    <span class="project-category">
+                        WEB DEVELOPMENT
+                    </span>
+
+                    <h3>
+                        Personal Website
+                    </h3>
+
+                    <p>
+                        Website portfolio pribadi
+                        menggunakan HTML dan CSS.
+                    </p>
+
+
+                    <div class="tags">
+
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+
+                    </div>
+
+
+                    <button
+                        class="project-button"
+                        onclick="showProject('Personal Website')">
+
+                        Lihat Detail →
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PROJECT 3 -->
+
+            <div class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="dashboard.jpg"
+                        alt="IoT Dashboard">
+
+                </div>
+
+
+                <div class="project-content">
+
+                    <span class="project-category">
+                        DASHBOARD
+                    </span>
+
+                    <h3>
+                        IoT Monitoring Dashboard
+                    </h3>
+
+                    <p>
+                        Dashboard untuk menampilkan
+                        data sensor.
+                    </p>
+
+
+                    <div class="tags">
+
+                        <span>Python</span>
+                        <span>Flask</span>
+                        <span>IoT</span>
+
+                    </div>
+
+
+                    <button
+                        class="project-button"
+                        onclick="showProject('IoT Monitoring Dashboard')">
+
+                        Lihat Detail →
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= JOURNEY ================= -->
+
+    <section id="journey" class="section">
+
+        <div class="section-title">
+
+            <p>
+                MY JOURNEY
+            </p>
+
+            <h2>
+                Perjalanan Belajar
+            </h2>
+
+        </div>
+
+
+        <div class="timeline">
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-content">
+
+                    <span>
+                        2024
+                    </span>
+
+                    <h3>
+                        Mulai Mengenal Teknologi
+                    </h3>
+
+                    <p>
+                        Mulai mempelajari komputer,
+                        jaringan, dan teknologi dasar.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-content">
+
+                    <span>
+                        2025
+                    </span>
+
+                    <h3>
+                        Belajar Programming
+                    </h3>
+
+                    <p>
+                        Mulai belajar HTML, CSS,
+                        JavaScript, dan Python.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-content">
+
+                    <span>
+                        2026
+                    </span>
+
+                    <h3>
+                        Mengembangkan Project
+                    </h3>
+
+                    <p>
+                        Mulai membuat website,
+                        IoT, dan project sekolah.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section id="contact" class="section">
+
+        <div class="section-title">
+
+            <p>
+                GET IN TOUCH
+            </p>
+
+            <h2>
+                Hubungi Saya
+            </h2>
+
+        </div>
+
+
+        <div class="contact-container">
+
+
+            <div class="contact-info">
+
+                <h3>
+                    Mari Terhubung 👋
+                </h3>
+
+                <p>
+                    Jika ingin berdiskusi atau melihat
+                    project saya lebih lanjut,
+                    silakan hubungi saya.
+                </p>
+
+
+                <div class="contact-item">
+
+                    <span>📧</span>
+
+                    <div>
+
+                        <strong>
+                            Email
+                        </strong>
+
+                        <p>
+
+                            <a
+                                href="mailto:bayuzahir@email.com"
+                                class="contact-link">
+
+                                bayuzahir@email.com
+
+                            </a>
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <span>💻</span>
+
+                    <div>
+
+                        <strong>
+                            GitHub
+                        </strong>
+
+                        <p>
+
+                            <a
+                                href="https://github.com/"
+                                target="_blank"
+                                class="contact-link">
+
+                                GitHub Saya
+
+                            </a>
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <span>📷</span>
+
+                    <div>
+
+                        <strong>
+                            Instagram
+                        </strong>
+
+                        <p>
+
+                            <a
+                                href="https://instagram.com/"
+                                target="_blank"
+                                class="contact-link">
+
+                                Instagram Saya
+
+                            </a>
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <form id="contactForm">
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Nama kamu"
+                    required>
+
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Email kamu"
+                    required>
+
+
+                <textarea
+                    id="message"
+                    rows="6"
+                    placeholder="Tulis pesan..."
+                    required></textarea>
+
+
+                <button
+                    type="submit"
+                    class="btn primary">
+
+                    Kirim Pesan
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-logo">
+            BZ<span>.</span>
+        </div>
+
+        <p>
+            Build. Learn. Create.
+        </p>
+
+        <div class="social">
+
+            <a href="#home">
+                Home
+            </a>
+
+            <a href="#about">
+                About
+            </a>
+
+            <a href="#projects">
+                Projects
+            </a>
+
+            <a href="#contact">
+                Contact
+            </a>
+
+        </div>
+
+        <p>
+            © 2026 Bayu Zahir
+        </p>
+
+    </footer>
+
+
+
+    <!-- ================= MODAL PROJECT ================= -->
+
+    <div
+        id="modal"
+        class="modal">
+
+        <div class="modal-content">
+
+
+            <button
+                class="close"
+                onclick="closeModal()">
+
+                ×
+
+            </button>
+
+
+            <div class="modal-image">
+
+                <img
+                    id="modalImage"
+                    src=""
+                    alt="Project">
+
+            </div>
+
+
+            <h2 id="modalTitle">
+                Project
+            </h2>
+
+
+            <p id="modalText">
+                Detail project.
+            </p>
+
+
+            <button
+                class="btn primary"
+                onclick="closeModal()">
+
+                Tutup
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script>
+
+
+        /* MENU MOBILE */
+
+        function toggleMenu() {
+
+            const menu =
+                document.querySelector(".nav-menu");
+
+            menu.classList.toggle("active");
+
+        }
+
+
+        /* TUTUP MENU */
+
+        document
+            .querySelectorAll(".nav-menu a")
+            .forEach(function(link) {
+
+                link.addEventListener(
+                    "click",
+                    function() {
+
+                        document
+                            .querySelector(".nav-menu")
+                            .classList.remove("active");
+
+                    }
+                );
+
+            });
+
+
+
+        /* PROJECT DETAIL */
+
+        function showProject(project) {
+
+            const modal =
+                document.getElementById("modal");
+
+            const title =
+                document.getElementById("modalTitle");
+
+            const text =
+                document.getElementById("modalText");
+
+            const image =
+                document.getElementById("modalImage");
+
+
+            if (project === "Smart Room Guardian") {
+
+                title.innerText =
+                    "Smart Room Guardian";
+
+                text.innerText =
+                    "Smart Room Guardian adalah project Internet of Things menggunakan ESP32, DHT11, dan flame sensor untuk memantau kondisi suhu dan api pada ruangan.";
+
+                image.src =
+                    "smart-room.jpg";
+
+            }
+
+
+            else if (project === "Personal Website") {
+
+                title.innerText =
+                    "Personal Website";
+
+                text.innerText =
+                    "Website portfolio pribadi yang dibuat menggunakan HTML, CSS, dan JavaScript untuk menampilkan informasi diri, kemampuan, dan project.";
+
+                image.src =
+                    "website.jpg";
+
+            }
+
+
+            else {
+
+                title.innerText =
+                    "IoT Monitoring Dashboard";
+
+                text.innerText =
+                    "Dashboard IoT digunakan untuk menampilkan data sensor seperti suhu dan kelembapan sehingga kondisi dapat dipantau dengan lebih mudah.";
+
+                image.src =
+                    "dashboard.jpg";
+
+            }
+
+
+            modal.style.display =
+                "flex";
+
+        }
+
+
+
+        /* DETAIL SKILL */
+
+        function showSkill(skill) {
+
+            const modal =
+                document.getElementById("modal");
+
+            const title =
+                document.getElementById("modalTitle");
+
+            const text =
+                document.getElementById("modalText");
+
+            const image =
+                document.getElementById("modalImage");
+
+
+            title.innerText =
+                skill;
+
+
+            text.innerText =
+                "Skill " +
+                skill +
+                " merupakan salah satu kemampuan yang sedang saya pelajari dan kembangkan melalui tugas dan project.";
+
+
+            image.src =
+                "website.jpg";
+
+
+            modal.style.display =
+                "flex";
+
+        }
+
+
+
+        /* TUTUP MODAL */
+
+        function closeModal() {
+
+            document
+                .getElementById("modal")
+                .style.display =
+                "none";
+
+        }
+
+
+
+        /* KLIK LUAR MODAL */
+
+        window.addEventListener(
+            "click",
+            function(event) {
+
+                const modal =
+                    document.getElementById("modal");
+
+                if (event.target === modal) {
+
+                    modal.style.display =
+                        "none";
+
+                }
+
+            }
+        );
+
+
+
+        /* FORM */
+
+        document
+            .getElementById("contactForm")
+            .addEventListener(
+                "submit",
+                function(event) {
+
+                    event.preventDefault();
+
+
+                    const name =
+                        document
+                        .getElementById("name")
+                        .value;
+
+
+                    alert(
+                        "Terima kasih, " +
+                        name +
+                        "! Pesan berhasil dikirim."
+                    );
+
+
+                    document
+                        .getElementById("contactForm")
+                        .reset();
+
+                }
+            );
+
+    </script>
+
+
+</body>
+</html>
